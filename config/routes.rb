@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root 'home'
+
+
+  get '/profile' => 'commuters#profile'
+  get '/profile/search' => 'routes#search'
+  get '/profile/edit' => 'commuters#edit'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
