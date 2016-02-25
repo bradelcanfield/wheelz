@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
-  root 'home'
+  root 'home#home'
 
 
   get '/profile' => 'commuters#profile'
   get '/profile/search' => 'routes#search'
   get '/profile/edit' => 'commuters#edit'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/profile/new' => 'commuters#new'
+  post '/profile/new' => 'commuters#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

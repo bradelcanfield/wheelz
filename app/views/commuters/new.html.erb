@@ -1,0 +1,10 @@
+<h1>Sign up!</h1>
+
+<%= form_for :commuter, url: '/profile/new' do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+  Passworrd Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit" %>
+  <%end%>
