@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_pt: MyString
+  end_pt: MyString
+  arrive_by: 2016-02-24 20:09:56
+  reoccurance: MyString
+
+two:
+  start_pt: MyString
+  end_pt: MyString
+  arrive_by: 2016-02-24 20:09:56
+  reoccurance: MyString
