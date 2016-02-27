@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   get '/profile/new' => 'commuters#new'
   post '/profile/new' => 'commuters#create'
 
+  resources :appointments
+
+  get '/appointments' => 'appointments#welcome'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
