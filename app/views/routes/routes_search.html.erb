@@ -1,0 +1,18 @@
+<h1>Search Page</h1>
+
+<%= form_for(@search) do |f| %>
+  <div class="field">
+    <%= f.label :start_pt, "Destination:" %><br>
+    <%= f.text_field :start_pt %>
+    <%= f.submit "Submit" %>
+  </div>
+  <%end%>
+
+
+<!--
+<%# @routes.each do |route| %>
+  <div class="route">
+    <h1 class="article-title"><%#= link_to route.title, route %></h1>
+    <p class="route-content"><%#= route.content %></p>
+  </div>
+<%# end %> -->

@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
 
   get '/profile' => 'commuters#profile'
-  get '/profile/search' => 'routes#search'
+  get '/profile/search' => 'routes#routes_search'
+  post '/profile/search' => 'routes#routes_search_create'
   get '/profile/edit' => 'commuters#edit'
 
+  post '/routes' => 'routes#routes_search'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
@@ -14,7 +16,6 @@ Rails.application.routes.draw do
   post '/profile/new' => 'commuters#create'
 
   resources :appointments
-
   get '/appointments' => 'appointments#welcome'
 
   # The priority is based upon order of creation: first created -> highest priority.
