@@ -1,0 +1,24 @@
+/*<div class="navbar">
+  <ul class="navbar_list">
+    <li id="home">Home</li>
+    <li id="profile">Profile</li>
+    <li id="search">Search</li>
+    <li id="log">Login/Logout</li>
+  </ul>
+</div>*/
+
+
+/*
+div.navbar {
+  position: fixed;
+  top: 0px;
+}
+
+ul.navbar_list {
+  list-style: none;
+}
+
+li {
+  display: inline;
+  float: left;
+}*/
