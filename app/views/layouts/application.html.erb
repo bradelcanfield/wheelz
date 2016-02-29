@@ -13,6 +13,10 @@
    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', profile_new_path %>
   <% end %>
 
+  <!-- <script type="text/javascript" src="application.js">
+  </script>
+
+  <link rel="stylesheet" href="application.css" charset="utf-8"> -->
 
 
   <header class="nav" id="top" role="banner">
@@ -35,22 +39,24 @@
      <a href="../login">Login/Logout</a>
    </li>
  </ul>
+
+
+ <div class="dropdown">
+  <button class="dropbtn">|||</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="/login">Log In</a>
+    <a href="/logout">Log Out</a>
+  </div>
+</div>
  </nav>
  <!-- ::after -->
- </div>
+
  <!-- ::after -->
  </header>
 
 
-  <!-- When submit the form, the view rendered will be the index view of our articles resource -->
-    <!-- <%#= form_tag(routes_path, :method => "get", class: "navbar-form", id: "search-form") do %>
-      <div class="input-append">
-        <%#= text_field_tag :search, params[:search], class: "span2", placeholder: "Search Route" %> -->
-        <!-- In order to have the "search" icon int the button, we need to use plain HTML instead
-             of using a Rails form helper -->
-        <!-- <button class="btn" type="submit"><i class="icon-search"></i></button>
-      </div>
-    <%# end %> -->
+
+
 <%= yield %>
 
 </body>
