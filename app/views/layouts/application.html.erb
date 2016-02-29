@@ -4,20 +4,16 @@
   <title>Wheelz</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller_name %> <%= action_name %>">
+
   <% if current_user %>
    Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
   <% else %>
    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', profile_new_path %>
   <% end %>
-
-  <!-- <script type="text/javascript" src="application.js">
-  </script>
-
-  <link rel="stylesheet" href="application.css" charset="utf-8"> -->
-
 
   <header class="nav" id="top" role="banner">
       <nav id="navbar"
@@ -36,6 +32,9 @@
      <a href="../profile/new">Sign Up</a>
    </li>
    <li>
+     <a href="../about">About</a>
+   </li>
+   <li>
      <a href="../login">Login/Logout</a>
    </li>
  </ul>
@@ -49,13 +48,8 @@
   </div>
 </div>
  </nav>
- <!-- ::after -->
 
- <!-- ::after -->
  </header>
-
-
-
 
 <%= yield %>
 

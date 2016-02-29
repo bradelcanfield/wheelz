@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#home'
 
+  get '/about' => 'home#about'
+
 
   get '/profile' => 'commuters#profile'
   get '/profile/search' => 'routes#routes_search'
