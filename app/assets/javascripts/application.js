@@ -19,5 +19,11 @@
 $(function(){
   $('.dropbtn').on('click', function(){
     $('#myDropdown').toggle();
-  })
+  });
+  $('.login').on('click', function(){
+    $('.login-form').toggle();
+  });
+  $('.signup').on('click', function(){
+    $('.signup-form').toggle();
+  });
 })

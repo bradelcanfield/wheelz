@@ -10,46 +10,70 @@
 <body class="<%= controller_name %> <%= action_name %>">
 
   <% if current_user %>
-   Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
   <% else %>
-   <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', profile_new_path %>
+  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', profile_new_path %>
   <% end %>
 
   <header class="nav" id="top" role="banner">
-      <nav id="navbar"
- class="collapse navbar-collapse">
- <ul>
-   <li>
-     <a href="../">Home</a>
-   </li>
-   <li>
-     <a href="../profile">Profile</a>
-   </li>
-   <li>
-     <a href="../profile/search">Search</a>
-   </li>
-   <li>
-     <a href="../profile/new">Sign Up</a>
-   </li>
-   <li>
-     <a href="../about">About</a>
-   </li>
-   <li>
-     <a href="../login">Login/Logout</a>
-   </li>
- </ul>
+    <nav id="navbar"
+    class="collapse navbar-collapse">
+    <ul>
+      <li>
+        <a href="../">Home</a>
+      </li>
+      <li>
+        <a href="../profile">Profile</a>
+      </li>
+      <li>
+        <a href="../profile/search">Search</a>
+      </li>
+      <li>
+        <a href="../profile/new">Sign Up</a>
+      </li>
+      <li>
+        <a href="../about">About</a>
+      </li>
+    </ul>
 
 
- <div class="dropdown">
-  <button class="dropbtn">|||</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="/login">Log In</a>
-    <a href="/logout">Log Out</a>
-  </div>
-</div>
- </nav>
+    <div class="dropdown">
+      <button class="dropbtn">|||</button>
+      <div id="myDropdown" class="dropdown-content">
 
- </header>
+        <% if current_user%>
+        Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+        <% else %>
+        <%= form_tag '/login' do %>
+        <%end%>
+        <%end%>
+
+        <% if !current_user %>
+        <button class="login">Login</button>
+        <div class="login-form">
+          <%= form_tag '/login' do %>
+          Email: <%= text_field_tag :email %>
+          Password: <%= password_field_tag :password %>
+          <%= submit_tag "Submit" %>
+          <%end%>
+        </div>
+
+        <button class="signup">Sign Up</button>
+        <div class="signup-form">
+          <%= form_for :commuter, url: '/profile/new' do |f| %>
+          Name: <%= f.text_field :name %>
+          Email: <%= f.text_field :email %>
+          Password: <%= f.password_field :password %>
+          Passworrd Confirmation: <%= f.password_field :password_confirmation %>
+          <%= f.submit "Submit" %>
+          <%end%>
+        </div>
+        <%end%>
+      </div>
+    </div>
+  </nav>
+
+</header>
 
 <%= yield %>
 
