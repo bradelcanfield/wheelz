@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require jquery.readyselector
 //= require_tree .
+
+
+$(function(){
+  $('.dropbtn').on('click', function(){
+    $('#myDropdown').toggle();
+  })
+})

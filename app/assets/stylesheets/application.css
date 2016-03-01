@@ -22,3 +22,53 @@ li a {
 li a:hover {
     background-color: #7A67EE;
 }
+
+.dropdown {
+  float: right;
+  margin-top: -50px;
+}
+
+.dropdown-content a {
+    color: #7A67EE;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 13.5px;
+
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: 	#7A67EE;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#myDropdown {
+  display: none;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    position: absolute;
+    right: 0;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
