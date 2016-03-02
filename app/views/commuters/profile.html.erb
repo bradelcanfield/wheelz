@@ -1,7 +1,14 @@
-<h1>Profile Page</h1>
-<%= link_to 'Search', profile_search_path %>
+<h1 >Profile Page</h1>
+
+<div id="welcome">
+<% if current_user%>
+Welcome, <%= current_user.name  %>!
+<%end%>
+</div>
+<br>
 
 <br>
-<div style="height: 500px; width: 500px" id="map_fave"></div>
+
+<div id="map_fave"></div>
 <br>
 <div style="height: 500px; width: 500px" id="map_recent"></div>

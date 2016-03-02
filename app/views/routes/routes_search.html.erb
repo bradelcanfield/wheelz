@@ -1,12 +1,17 @@
-<h1>Search Page</h1>
+<h1>Where Do You Want To Go?</h1>
 
 <%= form_for(@search) do |f| %>
   <div class="field">
-    <%= f.label :start_pt, "Destination:" %><br>
+    <%= f.label :start_pt, "Search for a Destination:" %><br>
     <%= f.text_field :start_pt %>
     <%= f.submit "Submit" %>
   </div>
   <%end%>
+
+
+  <div id="map_fave"></div>
+  <br>
+
 
 
 <!--

@@ -1,9 +1,19 @@
+/*
+*= require_tree
+*= require_self
+*/
+h1 {
+  color: white;
+}
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-left: 4em;
     overflow: hidden;
-    background-color: #333;
+
+    /*background-color: #424242;
+    rgba: 66, 66, 66, 0.81;
+    hsla: 0, 0%, 26%, 0.81;*/
 }
 
 li {
@@ -12,48 +22,66 @@ li {
 
 li a {
     display: block;
-    color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    font-weight: 200;
+    font-size: 16px;
+    font-family: sans-serif;
+    -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #7A67EE;
+    background-color: #87CEFA;
+
 }
 
 .dropdown {
-  float: right;
+  float: left;
   margin-top: -50px;
+  position: relative;
+  display: inline-block;
+  background: rgba(0,0,0,0);
+
 }
 
-.dropdown-content a {
-    color: #7A67EE;
+/*.dropdown-content a {
+    color: inherit;;
     padding: 12px;
     text-decoration: none;
     display: block;
-}
+}*/
 
 .dropbtn {
-    background-color: #333;
+  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+    background-color: #424242;
     color: white;
     padding: 13.5px;
-
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    -webkit-box-sizing: content-box;
+    cursor: pointer;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: 	#7A67EE;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
+    background-color: 	#87CEFA;
 }
 
 #myDropdown {
@@ -62,13 +90,85 @@ li a:hover {
 
 .dropdown-content {
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: ;
     min-width: 100px;
+    background: rgba(0,0,0,0);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     position: absolute;
-    right: 0;
+    left: 0;
+    font-family: sans-serif;
+    font-size: 14px;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #87CEFA;
+  color: white;
+}
 
-.show {display:block;}
+
+.login-form {
+  display: none;
+}
+
+.signup-form {
+  display: none;
+}
+
+.login {
+    height: 40px;
+    width: 100px;
+    margin-bottom: 5px;
+    position:relative;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: sans-serif;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.signup {
+  height: 40px;
+  width: 100px;
+  margin-bottom: 5px;
+  position:relative;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+  font-family: sans-serif;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.login:hover, .login:focus {
+    background-color: 	#87CEFA;
+}
+
+.signup:hover, .signup:focus {
+    background-color: 	#87CEFA;
+}
+
+body#background {
+  background: url(http://pedaleaza.ro/wp-content/uploads/2014/09/Ceauca-Florian-Catalin.jpg)no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+div.container {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: red;
+  font-style: bold;
+  background-color: white;
+}

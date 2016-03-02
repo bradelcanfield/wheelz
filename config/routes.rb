@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
+
   get '/profile/new' => 'commuters#new'
   post '/profile/new' => 'commuters#create'
 

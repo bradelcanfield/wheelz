@@ -1,7 +1,26 @@
-<h1>Home Page</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
 
-<%= link_to 'Register' %><br>
+  <body>
+    <h1>Welcome to Wheelz!</h1>
 
-<%= link_to 'Log In' %><br>
-
-<%= link_to 'Profile', profile_path %>
+    <div id="welcome">
+    <% if current_user%>
+    Welcome, <%= current_user.name  %>!<br><br>
+    Go to<br>
+    <%= link_to 'Profile', profile_path %>
+    <% else %>
+    <div>
+    <%= link_to 'Sign Up', profile_new_path %><br>
+    <%= link_to 'Log In', login_path %><br>
+    <%= link_to 'Profile', profile_path %>
+    </div>
+    <%end%>
+    </div>
+    <br>
+  </body>
+</html>

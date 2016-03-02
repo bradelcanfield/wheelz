@@ -1,10 +1,22 @@
 <h1>Sign up!</h1>
 
+<table id="signup-form">
 <%= form_for :commuter, url: '/profile/new' do |f| %>
-
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Passworrd Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+  <tr>
+    <td>Name:</td> <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+  <td>Email:</td> <td><%= f.text_field :email %></td>
+</tr>
+<tr>
+  <td>Password:</td> <td><%= f.password_field :password %></td>
+</tr>
+<tr>
+  <td>Password Confirmation:</td> <td><%= f.password_field :password_confirmation %></td>
+</tr>
+<tr>
+  <td></td>
+  <td><%= f.submit "Submit" %></td>
+</tr>
   <%end%>
+</table>
