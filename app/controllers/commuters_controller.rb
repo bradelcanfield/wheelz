@@ -13,7 +13,8 @@ class CommutersController < ApplicationController
       session[:commuter_id] = commuter.id
       redirect_to '/profile'
     else
-      redirect_to '/'
+      flash[:danger] = 'Name, email, and password fields must be filled.'
+      redirect_to '/profile/new'
     end
   end
 

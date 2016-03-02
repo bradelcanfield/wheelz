@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:commuter_id] = commuter.id
       redirect_to '/'
     else
-      # we should create a flash method for incorrect input
+      flash[:danger] = 'Invalid email/password combination'
       redirect_to '/login'
     end
   end
