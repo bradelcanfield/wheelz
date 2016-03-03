@@ -6,37 +6,33 @@ h1 {
   color: white;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 4em;
-    overflow: hidden;
-
-    /*background-color: #424242;
-    rgba: 66, 66, 66, 0.81;
-    hsla: 0, 0%, 26%, 0.81;*/
+  list-style-type: none;
+  margin: 0;
+  padding-left: 4em;
+  overflow: hidden;
 }
 
 li {
-    float: left;
+  float: left;
 }
 
 li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    font-weight: 200;
-    font-size: 16px;
-    font-family: sans-serif;
-    -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
-    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  font-weight: 200;
+  font-size: 16px;
+  font-family: sans-serif;
+  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #87CEFA;
+  background-color: #87CEFA;
 
 }
 
@@ -49,39 +45,32 @@ li a:hover {
 
 }
 
-/*.dropdown-content a {
-    color: inherit;;
-    padding: 12px;
-    text-decoration: none;
-    display: block;
-}*/
-
 .dropbtn {
   -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
-    background-color: #424242;
-    color: white;
-    padding: 13.5px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    -webkit-box-sizing: content-box;
-    cursor: pointer;
-    margin: 0 auto;
-    border: 2px solid white;
-    border-radius: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
-    text-align: center;
-    -o-text-overflow: clip;
-    text-overflow: clip;
-    letter-spacing: 1px;
-    background: rgba(0,0,0,0);
-    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  background-color: #424242;
+  color: white;
+  padding: 13.5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  -webkit-box-sizing: content-box;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: 	#87CEFA;
+  background-color: 	#87CEFA;
 }
 
 #myDropdown {
@@ -89,15 +78,15 @@ li a:hover {
 }
 
 .dropdown-content {
-    position: absolute;
-    background-color: ;
-    min-width: 100px;
-    background: rgba(0,0,0,0);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    position: absolute;
-    left: 0;
-    font-family: sans-serif;
-    font-size: 14px;
+  position: absolute;
+  background-color: ;
+  min-width: 100px;
+  background: rgba(0,0,0,0);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  position: absolute;
+  left: 0;
+  font-family: sans-serif;
+  font-size: 14px;
 }
 
 .dropdown-content a:hover {
@@ -115,20 +104,20 @@ li a:hover {
 }
 
 .login {
-    height: 40px;
-    width: 100px;
-    margin-bottom: 5px;
-    position:relative;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 200;
-    font-family: sans-serif;
-    background: rgba(0,0,0,0);
-    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  height: 40px;
+  width: 100px;
+  margin-bottom: 5px;
+  position:relative;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+  font-family: sans-serif;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
 .signup {
@@ -149,11 +138,11 @@ li a:hover {
 }
 
 .login:hover, .login:focus {
-    background-color: 	#87CEFA;
+  background-color: 	#87CEFA;
 }
 
 .signup:hover, .signup:focus {
-    background-color: 	#87CEFA;
+  background-color: 	#87CEFA;
 }
 
 body#background {

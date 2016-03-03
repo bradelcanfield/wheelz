@@ -7,6 +7,31 @@ Welcome, <%= current_user.name  %>!
 </div>
 <br>
 
+<div class="appointments">
+  <button class="dropbtn-appts">Set an alarm for your route departure!</button>
+  <div id="myApptsDropdown" class="appts-content">
+    <div class="appts-form">
+      <%= form_tag '/appointments/new' do %>
+      <p>What time would you like to be notified to leave for your commute?</p>
+      <table>
+        <tr>
+          <td>Name:</td> <td><%= text_field_tag :name %></td>
+        </tr>
+        <tr>
+          <td>Phone Number:</td> <td><%= text_field_tag :phone_number %></td>
+        </tr>
+        <tr>
+          <td>Time:</td> <td><%= text_field_tag :time %></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><%= submit_tag "Submit" %></td>
+        </tr>
+      </table>
+      <% end %>
+    </div>
+  </div>
+</div>
 <br>
 
 <div id="map_fave"></div>
