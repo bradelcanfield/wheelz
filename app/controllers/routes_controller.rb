@@ -1,6 +1,6 @@
 class RoutesController < ApplicationController
-before_filter :authorize
-def index
+  before_filter :authorize
+  def index
     if params[:search]
       @routes = Route.search(params[:search]).order("created_at DESC")
     else

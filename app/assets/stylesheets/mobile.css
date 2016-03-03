@@ -2,8 +2,17 @@
 *= require_tree
 *= require_self
 */
+
+#welcome {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
 h1 {
   color: white;
+  font-size: 18px;
 }
 
 ul {
@@ -20,9 +29,9 @@ li {
 li a {
   display: block;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 12px;
   font-weight: 200;
-  font-size: 16px;
+  font-size: 12px;
   font-family: sans-serif;
   -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
   -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
@@ -73,18 +82,16 @@ li a:hover {
 #myDropdown {
   display: none;
   color: white;
+  min-width: 50%;
 }
 
 .dropdown-content {
   position: absolute;
-  background-color: ;
-  min-width: 100px;
   background: rgba(0,0,0,0);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  position: absolute;
-  left: 0;
+  /*left: 0;*/
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .dropdown-content a:hover {
@@ -162,7 +169,7 @@ li a:hover {
 }
 
 body#background {
-  background: url(http://pedaleaza.ro/wp-content/uploads/2014/09/Ceauca-Florian-Catalin.jpg)no-repeat 50% 50% fixed;
+  background: url(http://pedaleaza.ro/wp-content/uploads/2014/09/Ceauca-Florian-Catalin.jpg)no-repeat 30% 30% fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -178,7 +185,99 @@ div.container {
   background-color: white;
 }
 
+.appts {
+  position: center;
+  -webkit-clip-path: polygon(0 25%, 30% 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0);
+  color: white;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  -webkit-box-sizing: content-box;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: polygon(0 25%, 30% 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.appts:hover {background-color: #87CEFA}
+
+.search-bttn {
+  position: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  -webkit-clip-path: polygon(0 40%, 30% 0, 100% 0, 100% 30%, 70% 100%, 0 100%);
+  background-color: rgba(0,0,0,0);
+  color: white;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  -webkit-box-sizing: content-box;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: polygon(0 35%, 30% 0, 100% 0, 100% 20%, 70% 100%, 0 100%);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.search-bttn:hover {background-color: #87CEFA}
+
+div#map_fave {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
 footer {
-  float:right;
-  margin-top: 35%;
+  margin-top: 118%;
+}
+
+.profile-bttn {
+  position: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
+  background-color: rgba(0,0,0,0);
+  color: white;
+  padding: 13.5px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  -webkit-box-sizing: content-box;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.profile-bttn:hover {
+  background-color: #87CEFA;
 }
