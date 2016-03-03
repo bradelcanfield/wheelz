@@ -1,37 +1,28 @@
-$('body').ready(function() {
+$('body.commuters.profile').ready(function() {
   console.log('maps.js loaded');
 
-  // $.ajax({
-  //     url: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCFHwXOAx3AMwsD4zjr4vx_cPF_wVk2h2U&callback=initMap',
-  //     dataType: 'script',
-  //     timeout: 30000,
-  //     success: function () {
-  //         console.log('$.ajax success');
-  //     },
-  //     error: function () {
-  //         console.log('$.ajax failure');
-  //     }
-  // });
-
-  var map;
-  initMap = function() {
-    console.log('map loaded')
-    map = new google.maps.Map(document.getElementById('map_fave'), {
-      center: {lat: 25.75, lng: -80.25},
-      zoom: 11
+  function initMap() {
+    console.log('initMap called')
+    var map = new google.maps.Map(document.getElementById('map_fave'), {
+      center: {lat: 25.77, lng: -80.2},
+      zoom: 12
     });
+    var bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(map);
   }
 
-  // initMap();
+  google.maps.event.addDomListener(window, 'load', initMap);
 
-//   function initialize() {
-//       var mapCanvas = $('#map_recent')
-//       var mapOptions = {
-//         center: new google.maps.LatLng(0, 0),
-//         zoom: 1,
-//         mapTypeId: google.maps.MapTypeId.ROADMAP
-//       }
-//       var map = new.google.maps.Map(mapCanvas, mapOptions);
-//   }
-//
+  // var key = 'key=AIzaSyCFHwXOAx3AMwsD4zjr4vx_cPF_wVk2h2U'
+  // var base_url = 'https://maps.googleapis.com/maps/api/directions/json';
+  // var request_url
+  // var origin;
+  // var destination;
+  // var mode
+  // var avoid = 'avoid=tolls|highways|ferries|indoor';
+  // var arrival_time;
+  // var transit_mode
+  // var transit_routing_preference
+
+
 });
