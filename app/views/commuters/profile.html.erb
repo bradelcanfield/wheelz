@@ -7,6 +7,11 @@ Welcome, <%= current_user.name  %>!
 </div>
 <br>
 
+<div class="search-link">
+<%= link_to 'Search', routes_path %>
+</div>
+<br>
+
 <div class="appointments">
   <button class="dropbtn-appts">Set an alarm for your route departure!</button>
   <div id="myApptsDropdown" class="appts-content">

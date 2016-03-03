@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/profile/search' => 'routes#routes_search'
   post '/profile/search' => 'routes#routes_search_create'
   get '/profile/edit' => 'commuters#edit'
+  get '/routes' => 'routes#routes_search'
 
   post '/routes' => 'routes#routes_search'
   get '/login' => 'sessions#new'

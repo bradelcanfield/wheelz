@@ -26,3 +26,20 @@ $('body.commuters.profile').ready(function() {
 
 
 });
+
+$('body.routes.routes_search').ready(function() {
+  console.log('maps.js loaded');
+
+  function initMap() {
+    console.log('initMap called')
+    var map = new google.maps.Map(document.getElementById('map_fave'), {
+      center: {lat: 25.77, lng: -80.2},
+      zoom: 12
+    });
+    var bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initMap);
+
+});
