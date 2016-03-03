@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     return layout if layout
     agent = request.headers["HTTP_USER_AGENT"].downcase
     MOBILE_BROWSERS.each do |m|
-      return "mobile aplication" if agent == m
+      return "mobile application" if agent == m
     end
     return "application"
   end
