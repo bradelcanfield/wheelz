@@ -2,9 +2,10 @@
 *= require_tree
 *= require_self
 */
-h1 {
+h1, h2 {
   color: white;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
