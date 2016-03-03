@@ -1,41 +1,17 @@
-<h1 >Profile Page</h1>
-
 <div id="welcome">
-<% if current_user%>
-Welcome, <%= current_user.name  %>!
-<%end%>
+  <% if current_user%>
+  Welcome, <%= current_user.name  %>!
+  <%end%>
 </div>
 <br>
 
 <div class="search-link">
-<%= link_to 'Search', routes_path %>
+  <button class="search-bttn"><%= link_to 'Destination Search', routes_path %></button>
 </div>
 <br>
 
 <div class="appointments">
-  <button class="dropbtn-appts">Set an alarm for your route departure!</button>
-  <div id="myApptsDropdown" class="appts-content">
-    <div class="appts-form">
-      <%= form_tag '/appointments/new' do %>
-      <p>What time would you like to be notified to leave for your commute?</p>
-      <table>
-        <tr>
-          <td>Name:</td> <td><%= text_field_tag :name %></td>
-        </tr>
-        <tr>
-          <td>Phone Number:</td> <td><%= text_field_tag :phone_number %></td>
-        </tr>
-        <tr>
-          <td>Time:</td> <td><%= text_field_tag :time %></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><%= submit_tag "Submit" %></td>
-        </tr>
-      </table>
-      <% end %>
-    </div>
-  </div>
+  <button class="appts"><%= link_to 'Set an alarm for your route departure!', appointments_new_path %></button>
 </div>
 <br>
 

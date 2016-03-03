@@ -36,7 +36,7 @@
 
         <% if current_user%>
         Signed in as <%= current_user.name %>
-        <%= link_to "Logout", '/logout' %>
+        <button class="logout-button"><%= link_to 'Logout', logout_path %></button>
         <% else %>
         <%= form_tag '/login' do %>
         <%end%>
@@ -70,11 +70,11 @@
 </header>
 
 
-    <div class="container">
-      <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
-    </div>
+<div class="container">
+  <% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+</div>
 <%= yield %>
 
 </body>

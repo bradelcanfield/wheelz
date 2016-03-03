@@ -5,6 +5,7 @@
 h1 {
   color: white;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -23,17 +24,15 @@ li a {
   font-weight: 200;
   font-size: 16px;
   font-family: sans-serif;
-  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
   -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #87CEFA;
-
 }
 
 .dropdown {
@@ -42,12 +41,10 @@ li a:hover {
   position: relative;
   display: inline-block;
   background: rgba(0,0,0,0);
-
 }
 
 .dropbtn {
   -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
-  background-color: #424242;
   color: white;
   padding: 13.5px;
   font-size: 16px;
@@ -75,6 +72,7 @@ li a:hover {
 
 #myDropdown {
   display: none;
+  color: white;
 }
 
 .dropdown-content {
@@ -94,6 +92,24 @@ li a:hover {
   color: white;
 }
 
+.logout-button {
+  height: 40px;
+  width: 100px;
+  margin-bottom: 5px;
+  position:relative;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+  font-family: sans-serif;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.logout-button:hover {background-color: #87CEFA}
 
 .login-form {
   display: none;

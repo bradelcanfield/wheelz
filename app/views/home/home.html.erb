@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
 
-  <body>
-    <h1>Welcome to Wheelz!</h1>
+<body>
+  <h1>Welcome to Wheelz!</h1>
 
-    <div id="welcome">
+  <div id="welcome">
     <% if current_user%>
     Welcome, <%= current_user.name  %>!<br><br>
-    Go to<br>
-    <%= link_to 'Profile', profile_path %>
+    <button class="profile-bttn"><%= link_to 'Go to Profile', profile_path %></button>
     <% else %>
     <div>
-    <%= link_to 'Sign Up', profile_new_path %><br>
-    <%= link_to 'Log In', login_path %><br>
-    <%= link_to 'Profile', profile_path %>
+      <%= link_to 'Sign Up', profile_new_path %><br>
+      <%= link_to 'Log In', login_path %><br>
+      <%= link_to 'Profile', profile_path %>
     </div>
     <%end%>
-    </div>
-    <br>
-  </body>
+  </div>
+  <br>
+</body>
 </html>

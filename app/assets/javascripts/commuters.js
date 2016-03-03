@@ -1,8 +1,8 @@
 $(function(){
-  $('.dropbtn-appts').on('click', function(){
+  $('.appts').on('click', function(){
     $('#myApptsDropdown').toggle();
   });
-  $('.appts').on('click', function(){
-    $('.appts-form').toggle();
-  });
+  // $('.appts').on('click', function(){
+  //   $('.appts-form').toggle();
+  // });
 })
