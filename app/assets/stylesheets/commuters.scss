@@ -26,8 +26,9 @@ div#map_fave {
 
 .appts {
   position: center;
-  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 20%, 20% 0, 100% 0, 100% 55%, 55% 100%, 0 100%);
   background-color: rgba(0,0,0,0);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   color: white;
   padding: 13.5px;
   font-size: 18px;
@@ -49,12 +50,13 @@ div#map_fave {
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
-.appts:hover {background-color: #87CEFA}
+.appts:hover {background-color: #63B8FF}
 
 .search-bttn {
   position: center;
-  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 35%, 70% 100%, 0 100%);
   background-color: rgba(0,0,0,0);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   color: white;
   padding: 13.5px;
   font-size: 18px;
@@ -76,4 +78,4 @@ div#map_fave {
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
-.search-bttn:hover {background-color: #87CEFA}
+.search-bttn:hover {background-color: #63B8FF}

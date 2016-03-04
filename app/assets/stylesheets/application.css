@@ -32,7 +32,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #87CEFA;
+  background-color: #63B8FF;
 }
 
 .dropdown {
@@ -67,7 +67,7 @@ li a:hover {
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: 	#87CEFA;
+  background-color: 	#63B8FF;
 }
 
 #myDropdown {
@@ -88,7 +88,7 @@ li a:hover {
 }
 
 .dropdown-content a:hover {
-  background-color: #87CEFA;
+  background-color: #63B8FF;
   color: white;
 }
 
@@ -109,7 +109,7 @@ li a:hover {
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
-.logout-button:hover {background-color: #87CEFA}
+.logout-button:hover {background-color: #63B8FF}
 
 .login-form {
   display: none;
@@ -154,11 +154,11 @@ li a:hover {
 }
 
 .login:hover, .login:focus {
-  background-color: 	#87CEFA;
+  background-color: 	#63B8FF;
 }
 
 .signup:hover, .signup:focus {
-  background-color: 	#87CEFA;
+  background-color: 	#63B8FF;
 }
 
 body#background {
@@ -182,14 +182,6 @@ footer {
   float:right;
   margin-top: 400px;
 }
-
-
-
-
-
-
-
-
 
 
  /*for mobile*/
@@ -237,7 +229,7 @@ footer {
   }
 
   li a:hover {
-    background-color: #87CEFA;
+    background-color: #63B8FF;
   }
 
   .dropdown {
@@ -272,7 +264,7 @@ footer {
   }
 
   .dropbtn:hover, .dropbtn:focus {
-    background-color: 	#87CEFA;
+    background-color: 	#63B8FF;
   }
 
   #myDropdown {
@@ -291,7 +283,7 @@ footer {
   }
 
   .dropdown-content a:hover {
-    background-color: #87CEFA;
+    background-color: #63B8FF;
     color: white;
   }
 
@@ -312,7 +304,7 @@ footer {
     transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   }
 
-  .logout-button:hover {background-color: #87CEFA}
+  .logout-button:hover {background-color: #63B8FF}
 
   .login-form {
     display: none;
@@ -357,11 +349,11 @@ footer {
   }
 
   .login:hover, .login:focus {
-    background-color: 	#87CEFA;
+    background-color: 	#63B8FF;
   }
 
   .signup:hover, .signup:focus {
-    background-color: 	#87CEFA;
+    background-color: 	#63B8FF;
   }
 
   body#background {
@@ -406,7 +398,7 @@ footer {
     transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   }
 
-  .appts:hover {background-color: #87CEFA}
+  .appts:hover {background-color: #63B8FF}
 
   .search-bttn {
     position: center;
@@ -433,7 +425,7 @@ footer {
     transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   }
 
-  .search-bttn:hover {background-color: #87CEFA}
+  .search-bttn:hover {background-color: #63B8FF}
 
   div#map_fave {
     display: flex;
@@ -476,7 +468,7 @@ footer {
   }
 
   .profile-bttn:hover {
-    background-color: #87CEFA;
+    background-color: #63B8FF;
   }
 
 }
