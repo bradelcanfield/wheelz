@@ -21,6 +21,9 @@ class CommutersController < ApplicationController
   def edit
   end
 
+  def destroy
+  end
+
   private
   def commuter_params
     params.require(:commuter).permit(:name, :email, :password, :password_confirmation)

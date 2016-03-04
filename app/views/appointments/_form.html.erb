@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <h3> <%= f.label :name %><br></h3>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :phone_number %><br>
+    <h3> <%= f.label :phone_number %> <br></h3>
     <%= f.text_field :phone_number %>
   </div>
   <div class="field">
-    <%= f.label :time %><br>
+    <h3> <%= f.label :time %><br> </h3>
     <%= f.datetime_select :time %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Send Notification" %>
   </div>
 <% end %>
