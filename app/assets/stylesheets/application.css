@@ -2,7 +2,7 @@
 *= require_tree
 *= require_self
 */
-h1 {
+h1, h2, h3 {
   color: white;
 }
 
@@ -180,5 +180,303 @@ div.container {
 
 footer {
   float:right;
-  margin-top: 35%;
+  margin-top: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+ /*for mobile*/
+@media (max-width: 700px) {
+  /*
+  *= require_tree
+  *= require_self
+  */
+
+  #welcome {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: white;
+  }
+
+  h1 {
+    color: white;
+    font-size: 18px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 4em;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    text-align: center;
+    padding: 10px 12px;
+    font-weight: 200;
+    font-size: 12px;
+    font-family: sans-serif;
+    -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  }
+
+  li a:hover {
+    background-color: #87CEFA;
+  }
+
+  .dropdown {
+    float: left;
+    margin-top: -50px;
+    position: relative;
+    display: inline-block;
+    background: rgba(0,0,0,0);
+  }
+
+  .dropbtn {
+    -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+    color: white;
+    padding: 13.5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    -webkit-box-sizing: content-box;
+    cursor: pointer;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  }
+
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: 	#87CEFA;
+  }
+
+  #myDropdown {
+    display: none;
+    color: white;
+    min-width: 50%;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    background: rgba(0,0,0,0);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /*left: 0;*/
+    font-family: sans-serif;
+    font-size: 12px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #87CEFA;
+    color: white;
+  }
+
+  .logout-button {
+    height: 40px;
+    width: 100px;
+    margin-bottom: 5px;
+    position:relative;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: sans-serif;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  }
+
+  .logout-button:hover {background-color: #87CEFA}
+
+  .login-form {
+    display: none;
+  }
+
+  .signup-form {
+    display: none;
+  }
+
+  .login {
+    height: 40px;
+    width: 100px;
+    margin-bottom: 5px;
+    position:relative;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: sans-serif;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  }
+
+  .signup {
+    height: 40px;
+    width: 100px;
+    margin-bottom: 5px;
+    position:relative;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: sans-serif;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  }
+
+  .login:hover, .login:focus {
+    background-color: 	#87CEFA;
+  }
+
+  .signup:hover, .signup:focus {
+    background-color: 	#87CEFA;
+  }
+
+  body#background {
+    background: url(http://pedaleaza.ro/wp-content/uploads/2014/09/Ceauca-Florian-Catalin.jpg)no-repeat 30% 30% fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+  }
+
+  div.container {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: red;
+    font-style: bold;
+    background-color: white;
+  }
+
+  .appts {
+    position: center;
+    -webkit-clip-path: polygon(0 25%, 30% 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0);
+    color: white;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    -webkit-box-sizing: content-box;
+    cursor: pointer;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: polygon(0 25%, 30% 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  }
+
+  .appts:hover {background-color: #87CEFA}
+
+  .search-bttn {
+    position: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    -webkit-clip-path: polygon(0 40%, 30% 0, 100% 0, 100% 30%, 70% 100%, 0 100%);
+    background-color: rgba(0,0,0,0);
+    color: white;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+    -webkit-box-sizing: content-box;
+    cursor: pointer;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: polygon(0 35%, 30% 0, 100% 0, 100% 20%, 70% 100%, 0 100%);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  }
+
+  .search-bttn:hover {background-color: #87CEFA}
+
+  div#map_fave {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+
+  footer {
+    float: right;
+    margin-top: 350px;
+  }
+
+  .profile-bttn {
+    position: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
+    background-color: rgba(0,0,0,0);
+    color: white;
+    padding: 13.5px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    -webkit-box-sizing: content-box;
+    cursor: pointer;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  }
+
+  .profile-bttn:hover {
+    background-color: #87CEFA;
+  }
+
 }
