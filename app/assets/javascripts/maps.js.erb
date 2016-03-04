@@ -18,10 +18,11 @@ $('body.routes.routes_search').ready(function() {
 $('body.commuters.profile').ready(function() {
   console.log('maps.js.erb loaded');
 
+  // initialize map, apply bike layer
   function initMap() {
     console.log('initMap called');
     var map = new google.maps.Map(document.getElementById('map_fave'), {
-      center: {lat: 25.77, lng: -80.2},
+      center: {lat: 25.77, lng: -80.20},
       zoom: 12
     });
     var bikeLayer = new google.maps.BicyclingLayer();
@@ -30,38 +31,54 @@ $('body.commuters.profile').ready(function() {
 
   google.maps.event.addDomListener(window, 'load', initMap);
 
-  var key = 'key=AIzaSyCFHwXOAx3AMwsD4zjr4vx_cPF_wVk2h2U';
-  var base_url = 'https://maps.googleapis.com/maps/api/directions/json?';
-  var request_url = '';
-  var response;
-  var origin = '';
-  var destination;
-  var mode = 'mode=transit&';                             // bicycling
-  var avoid = 'avoid=tolls|highways|ferries|indoor&';
-  var arrival_time;                                       // only for transit (?)
-  var transit_mode = 'transit_mode=rail&';
-  var transit_routing_preference = 'transit_routing_preference=fewer_transfers&';
-
-  // function directionSearch() {
-  //   console.log('directionSearch loaded');
-  //   console.log(request_url);
-  //   request_url += (base_url + origin + destination + mode + avoid + transit_mode + transit_routing_preference + key);
-  //   console.log(request_url);
-  //   $.ajax({
-  //       url: request_url,
-  //       dataType: 'script',
-  //       timeout: 30000,
-  //       success: function () {
-  //           console.log('$.ajax success');
-  //       },
-  //       error: function () {
-  //           console.log('$.ajax failure');
-  //       }
-  //   });
-  // }
+  // directions request
 
 });
 
-function search() {
+var key = '&key=AIzaSyCFHwXOAx3AMwsD4zjr4vx_cPF_wVk2h2U';
+var base_url = 'https://maps.googleapis.com/maps/api/directions/json?';
+var request_url = '';
+var origin = '&origin=';
+var destination = '&destination=';
 
+function setAddress() {
+  console.log('sA start');
+  var start = origin;
+  start += prompt('Address?').replace(/,/g, "").replace(/ /g, "+");
+  console.log(start);
+}
+
+function searchURL() {
+  console.log('sU start');
+  origin += '5409 riviera drive coral gables fl 33146'.replace(/,/g, "").replace(/ /g, "+");
+  destination += '400 nw 26th street miami fl 33127'.replace(/,/g, "").replace(/ /g, "+");
+  request_url += base_url + origin + destination;
+  console.log(request_url);
+}
+
+function getResponse() {
+  console.log('gR start');
+  var directionService = new google.maps.DirectionsService();
+
+  var directionRequest = {
+    origin:'5409 riviera drive, coral cables, fl',
+    destination:'400 nw 26th street, miami, fl',
+    travelMode: google.maps.TravelMode.TRANSIT, // BICYCLING, WALKING
+    transitOptions: {
+      // arrival_time: new Date(1337675679473),
+      // departure_time: new Date(1337675679473),
+      modes: [
+        google.maps.TransitMode.RAIL,
+        google.maps.TransitMode.BUS
+      ],
+      routingPreference: google.maps.TransitRoutePreference.FEWER_TRANSFERS
+    },
+    provideRouteAlternatives: false,
+    avoidHighways: true,
+    avoidTolls: true
+  };
+
+  directionService.route(directionRequest, function(result, status) {
+    console.dir(result.routes[0].legs[0].steps);
+  });
 }
