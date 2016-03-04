@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   get '/about' => 'home#about'
 
-
   get '/profile' => 'commuters#profile'
+  get '/profile' => 'commuters#profile_path'
   get '/profile/search' => 'routes#routes_search'
   post '/profile/search' => 'routes#routes_search_create'
   get '/profile/edit' => 'commuters#edit'
@@ -21,6 +21,17 @@ Rails.application.routes.draw do
 
   resources :appointments
   get '/appointments' => 'appointments#welcome'
+  post '/appointments/new' => 'appointments#new'
+
+
+  resources :controller #=> "home", :action => "set_layout", :mobile => "1"
+  get '/mobile' => 'home#home'
+
+  resources :action #=> 'home#home'
+  get '/mobile/action' => 'home#set_layout'
+
+  resources :mobile
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
