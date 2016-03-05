@@ -1,10 +1,19 @@
 class CommutersController < ApplicationController
   before_action :authorize, only: [:profile, :edit]
 
+  def index
+    @commuters = Commuter.all
+  end
+
+  def show
+    @commuter = Commuter.find(params[:id])
+  end
+
   def profile
   end
 
   def new
+    @commuter = Commuter.new
   end
 
   def create

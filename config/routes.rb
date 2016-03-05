@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
+  resources :commuters
+  get '/signup'  => 'commuters#new'
+
 
   get '/profile/new' => 'commuters#new'
   post '/profile/new' => 'commuters#create'
