@@ -1,22 +1,24 @@
-<h1>Sign up!</h1>
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
 
-<table id="signup-form">
-  <%= form_for :commuter, url: '/profile/new' do |f| %>
-  <tr>
-    <td>Name:</td> <td><%= f.text_field :name %></td>
-  </tr>
-  <tr>
-    <td>Email:</td> <td><%= f.text_field :email %></td>
-  </tr>
-  <tr>
-    <td>Password:</td> <td><%= f.password_field :password %></td>
-  </tr>
-  <tr>
-    <td>Password Confirmation:</td> <td><%= f.password_field :password_confirmation %></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><%= f.submit "Submit" %></td>
-  </tr>
-  <%end%>
-</table>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@commuter) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
