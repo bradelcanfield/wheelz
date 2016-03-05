@@ -4,7 +4,7 @@
 <ul class="commuters">
   <% @commuters.each do |commuter| %>
     <li>
-      <%= gravatar_for commuter, size: 50 %>
+      <%= gravatar_for commuter, size: 100 %>
       <%= link_to commuter.name, commuter %>
     </li>
   <% end %>
