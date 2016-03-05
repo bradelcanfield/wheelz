@@ -1,5 +1,5 @@
 class CommutersController < ApplicationController
-  before_action :authorize, only: [:profile, :edit]
+  before_action :authorize, only: [:profile, :edit, :index]
 
   def index
     @commuters = Commuter.all

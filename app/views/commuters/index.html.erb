@@ -1,0 +1,11 @@
+<% provide(:title, 'All commuters') %>
+<h1>All commuters</h1>
+
+<ul class="commuters">
+  <% @commuters.each do |commuter| %>
+    <li>
+      <%= gravatar_for commuter, size: 50 %>
+      <%= link_to commuter.name, commuter %>
+    </li>
+  <% end %>
+</ul>

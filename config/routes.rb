@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :commuters
   get '/signup'  => 'commuters#new'
+  get '/index'   => 'commuters#index'
 
 
   get '/profile/new' => 'commuters#new'
