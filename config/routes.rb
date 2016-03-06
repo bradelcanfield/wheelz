@@ -18,10 +18,10 @@ Rails.application.routes.draw do
   resources :commuters
   get '/signup'  => 'commuters#new'
   get '/index'   => 'commuters#index'
-
-
   get '/profile/new' => 'commuters#new'
   post '/profile/new' => 'commuters#create'
+
+  resources :microposts,          only: [:create, :destroy]
 
   resources :appointments
   get '/appointments' => 'appointments#welcome'

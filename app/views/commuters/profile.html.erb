@@ -1,12 +1,17 @@
-
-<h1 >Profile Page</h1>
-
+<div id="profile-pic">
 <img src="/assets/default_pic.png" alt="" height="200" width="200">
+</div>
 
-<h3>Name: <%= current_user.name %></h3>
-<h3>Phone Number:  </h3>
-<h3>Email:</h3>
 
+
+<div class="holder">
+  <div id="welcome">
+    <% if current_user%><br>
+    Welcome, <%= current_user.name  %>!
+    <%end%>
+  </div><br>
+
+<<<<<<< HEAD
 
 <%= link_to 'Edit Profile' %>
 
@@ -16,17 +21,30 @@
   <%end%>
 </div>
 <br>
+=======
+  <div class="search-link">
+    <button class="search-bttn"><%= link_to 'Destination Search', routes_path %></button>
+  </div><br>
+>>>>>>> c8da810c098d76236d74f48a8f33670336b8c900
 
-<div class="search-link">
-  <button class="search-bttn"><%= link_to 'Destination Search', routes_path %></button>
+  <div class="appointments">
+    <button class="appts"><%= link_to 'Set an alarm for your route departure!', appointments_new_path %></button>
+  </div>
 </div>
-<br>
 
-<div class="appointments">
-  <button class="appts"><%= link_to 'Set an alarm for your route departure!', appointments_new_path %></button>
-</div>
-<br>
+<div id="map_fave">
+</div><br>
 
-<div id="map_fave"></div>
-<br>
-<div style="height: 500px; width: 500px" id="map_recent"></div>
+
+<!-- <div id="profile-info"> -->
+<table id="profile-info">
+<tr>
+<td><h3>Name:</h3></td> <td><%= current_user.name %></td>
+</tr>
+<tr>
+<td><h3>Phone Number:</h3></td> <td><%= current_user.phone_change %></td>
+</tr>
+<tr>
+<td><h3>Email:</h3></td> <td><%= current_user.email %></td>
+</tr>
+</table>

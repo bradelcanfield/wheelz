@@ -1,6 +1,7 @@
 <% provide(:title, "Log in") %>
 <h1>Log in</h1>
 
+<<<<<<< HEAD
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(:session, url: login_path) do |f| %>
@@ -15,5 +16,19 @@
     <% end %>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+=======
+
+
+<div class="holder">
+  <h1>Log In</h1>
+<%= form_tag '/login' do %>
+
+  Email: <%= text_field_tag :email %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+  <%end%><br>
+  <div>
+    <button id="signup-bttn"><%= link_to 'New user? Sign up now!', profile_new_path%></button><br>
+>>>>>>> c8da810c098d76236d74f48a8f33670336b8c900
   </div>
 </div>

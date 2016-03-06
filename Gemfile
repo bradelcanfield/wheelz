@@ -26,7 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Twilio
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
+# Google Maps API - Directions
+# gem 'google_maps_api-directions'
 
 # Use delayed job for running background jobs
 gem 'delayed_job_active_record'
