@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post '/routes' => 'routes#routes_search'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  delete '/logout' => 'sessions#destroy'
 
   resources :commuters
   get '/signup'  => 'commuters#new'

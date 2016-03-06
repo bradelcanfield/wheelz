@@ -1,3 +1,16 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 /* sidebar */
 
 aside {
@@ -37,13 +50,14 @@ aside {
 
 /* Commuters index */
 
-.commuters {
+div.commuters {
   list-style: none;
   margin: 0;
   li {
+    float: none;
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
   }
 }
 
@@ -59,6 +73,36 @@ aside {
 .field_with_errors {
   @extend .has-error !optional;
   .form-control {
-    color: state-danger-text;
+    color: $state-danger-text;
   }
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+/* universal */
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
 }

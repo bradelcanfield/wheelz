@@ -3,10 +3,13 @@
 
 <%= will_paginate %>
 
-<ul class="commuters">
+<div class="commuters">
+
+<ul>
   <% @commuters.each do |commuter| %>
     <%= render commuter %>
   <% end %>
 </ul>
+</div>
 
 <%= will_paginate %>

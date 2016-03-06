@@ -31,6 +31,15 @@ class CommutersController < ApplicationController
     @commuter = Commuter.find(params[:id])
   end
 
+  def update
+    if @commuter.update_attributes(commuter_params)
+      flash[:success] = "Profile updated"
+      redirect_to @commuter
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     Commuter.find(params[:id]).destroy
     flash[:success] = "Commuter deleted"
