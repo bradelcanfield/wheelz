@@ -1,7 +1,8 @@
 
-<h1>Log In</h1>
 
-<div>
+
+<div class="holder">
+  <h1>Log In</h1>
 <%= form_tag '/login' do %>
 
   Email: <%= text_field_tag :email %>
@@ -9,6 +10,6 @@
   <%= submit_tag "Submit" %>
   <%end%><br>
   <div>
-    <button id="signup-bttn"><%= link_to 'New user? Sign up now!', profile_new_path%></button>
+    <button id="signup-bttn"><%= link_to 'New user? Sign up now!', profile_new_path%></button><br>
   </div>
 </div>

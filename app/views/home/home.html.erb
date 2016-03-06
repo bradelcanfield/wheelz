@@ -6,23 +6,25 @@
 </head>
 
 <body>
-  <h1>Welcome to Wheelz!</h1>
+  <div class="holder">
+    <h1>Welcome to Wheelz!</h1>
 
-  <div id="welcome">
-    <% if current_user%>
-    Welcome, <%= current_user.name  %>!<br><br>
-    <button class="profile-bttn"><%= link_to 'Go to Profile', profile_path %></button>
-    <% else %>
-    <div id="welcome-bttns">
-      <div>
-        <button id="signup-bttn"><%= link_to 'New user? Sign up now!', profile_new_path %></button>
+    <div id="welcome">
+      <% if current_user%>
+      Welcome, <%= current_user.name  %>!<br><br>
+      <button class="profile-bttn"><%= link_to 'Go to Profile', profile_path %></button>
+      <% else %>
+      <div id="welcome-bttns">
+        <div>
+          <button id="signup-bttn"><%= link_to 'New user? Sign up now!', profile_new_path %></button>
+        </div>
+        <br>
+        <div>
+          <button id="login-bttn"><%= link_to 'Already a member? Sign in!', login_path %></button>
+        </div>
       </div>
-      <br>
-      <div>
-        <button id="login-bttn"><%= link_to 'Already a member? Sign in!', login_path %></button>
-      </div>
+      <%end%>
     </div>
-    <%end%>
   </div>
 
 </body>
