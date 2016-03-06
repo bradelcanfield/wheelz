@@ -11,6 +11,7 @@ div.holder {
   margin-top: -4em;
   position: relative;
   z-index: 3;
+  box-shadow: 4px 8px 16px 4px rgba(0.2,0,0,0.2);
 }
 
 h1, h2, h3 {
@@ -239,7 +240,7 @@ footer {
     text-align: center;
     padding: 10px 12px;
     font-weight: 200;
-    font-size: 12px;
+    font-size: 40px;
     font-family: sans-serif;
     -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
     -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
@@ -492,6 +493,39 @@ footer {
 
   .profile-bttn:hover {
     background-color: #63B8FF;
+  }
+
+  #profile-list {
+    display: list-item;
+    list-style-type: none;
+  }
+
+  #profile-pic {
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+    float: left;
+    padding-bottom: 0;
+    z-index: 5;
+    position: absolute;
+    margin-top: -3em;
+  }
+
+  td {
+    color: white;
+    margin-right: -3em;
+  }
+  div.holder {
+      background-color: black;
+      opacity: 0.6;
+      padding-top: 1em;
+      margin-left: -1em;
+      margin-right: -1em;
+      margin-top: -4em;
+      position: relative;
+      z-index: 3;
+      box-shadow: 4px 8px 16px 4px rgba(0.2,0,0,0.2);
   }
 
 }

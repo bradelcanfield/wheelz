@@ -24,10 +24,10 @@ Rails.application.routes.draw do
   post '/appointments/new' => 'appointments#new'
 
 
-  resources :controller #=> "home", :action => "set_layout", :mobile => "1"
+  resources :controller 
   get '/mobile' => 'home#home'
 
-  resources :action #=> 'home#home'
+  resources :action
   get '/mobile/action' => 'home#set_layout'
 
   resources :mobile
