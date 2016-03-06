@@ -13,11 +13,16 @@ Rails.application.routes.draw do
   post '/routes' => 'routes#routes_search'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  delete '/logout' => 'sessions#destroy'
 
-
+  resources :commuters
+  get '/signup'  => 'commuters#new'
+  get '/index'   => 'commuters#index'
+  get '/microposts' => 'microposts#new'
   get '/profile/new' => 'commuters#new'
   post '/profile/new' => 'commuters#create'
+
+  resources :microposts,          only: [:create, :destroy]
 
   resources :appointments
   get '/appointments' => 'appointments#welcome'

@@ -1,0 +1,15 @@
+<% provide(:title, 'All commuters') %>
+<h1>All commuters</h1>
+
+<%= will_paginate %>
+
+<div class="commuters">
+
+<ul>
+  <% @commuters.each do |commuter| %>
+    <%= render commuter %>
+  <% end %>
+</ul>
+</div>
+
+<%= will_paginate %>

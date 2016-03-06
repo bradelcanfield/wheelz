@@ -89,6 +89,7 @@ li a:hover {
 
 .dropdown-content {
   position: absolute;
+  background-color: none;
   z-index: 5;
   min-width: 100px;
   background: rgba(0,0,0,0);
