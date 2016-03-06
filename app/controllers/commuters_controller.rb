@@ -1,6 +1,7 @@
 class CommutersController < ApplicationController
-  before_action :authorize, only: [:profile, :edit, :index]
+  before_action :authorize, only: [:profile, :edit, :update, :index]
   before_action :admin_user,     only: :destroy
+
 
   def index
     @commuters = Commuter.paginate(page: params[:page])
@@ -8,6 +9,7 @@ class CommutersController < ApplicationController
 
   def show
     @commuter = Commuter.find(params[:id])
+    @microposts = @commuter.microposts.paginate(page: params[:page])
   end
 
   def profile
@@ -32,9 +34,10 @@ class CommutersController < ApplicationController
   end
 
   def update
+    @commuter = Commuter.find(params[:id])
     if @commuter.update_attributes(commuter_params)
-      flash[:success] = "Profile updated"
       redirect_to @commuter
+      # Handle a successful update.
     else
       render 'edit'
     end
