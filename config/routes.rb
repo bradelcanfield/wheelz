@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post '/routes' => 'routes#routes_search'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  delete '/logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#destroy'
 
   resources :commuters
   get '/signup'  => 'commuters#new'
@@ -29,10 +29,10 @@ Rails.application.routes.draw do
   post '/appointments/new' => 'appointments#new'
 
 
-  resources :controller #=> "home", :action => "set_layout", :mobile => "1"
+  resources :controller
   get '/mobile' => 'home#home'
 
-  resources :action #=> 'home#home'
+  resources :action
   get '/mobile/action' => 'home#set_layout'
 
   resources :mobile
