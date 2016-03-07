@@ -15,15 +15,6 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  resources :commuters
-  get '/signup'  => 'commuters#new'
-  get '/index'   => 'commuters#index'
-  get '/microposts' => 'microposts#new'
-  get '/profile/new' => 'commuters#new'
-  post '/profile/new' => 'commuters#create'
-
-  resources :microposts,          only: [:create, :destroy]
-
   resources :appointments
   get '/appointments' => 'appointments#welcome'
   post '/appointments/new' => 'appointments#new'
@@ -36,6 +27,20 @@ Rails.application.routes.draw do
   get '/mobile/action' => 'home#set_layout'
 
   resources :mobile
+
+  resources :commuters
+  get '/signup'  => 'commuters#new'
+  get '/index'   => 'commuters#index'
+  get '/microposts' => 'microposts#show'
+  get '/posts/new' => 'microposts#new'
+  get '/profile/new' => 'commuters#new'
+  post '/profile/new' => 'commuters#create'
+
+  resources :microposts,          only: [:create, :destroy]
+
+
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
