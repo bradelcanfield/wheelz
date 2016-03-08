@@ -2,6 +2,21 @@
 *= require_tree
 *= require_self
 */
+
+.map-search {
+  margin-left: -40em;
+  margin-top: -500px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: black;
+  opacity: 0.6;
+  margin-left: -8px;
+  margin-right: 80em;
+}
+
+.search-div {
+  margin-left: 40%;
+}
+
 div.posts li {
   float: inherit;
 }
@@ -562,6 +577,20 @@ li a {
       position: relative;
       z-index: 3;
       box-shadow: 4px 8px 16px 4px rgba(0.2,0,0,0.2);
+  }
+
+  .map-search {
+    margin-left: -1px;
+    margin-top: 1px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: black;
+    opacity: 0.6;
+    margin-left: -8px;
+    margin-right: 500em;
+  }
+
+  .search-div {
+    margin-left: 20%;
   }
 
 }

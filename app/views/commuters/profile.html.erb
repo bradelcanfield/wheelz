@@ -43,15 +43,26 @@
 <div id="map_fave"></div>
 <br>
 <div class="map-search">
-  <p>Origin:</p>
-  <input type="text" id="origin">
-  <p>Destination:</p>
-  <input type="text" id="destination">
-  <p>Arrival Time:</p>
-  <input type="text" id="arrival">
-  <br>
-  <button id="search_button">Search!</button>
-  <br>
+  <table id="map-search-table">
+    <tr>
+      <td><p>Origin:</p></td>
+      <td><input type="text" id="origin"></td>
+    </tr>
+    <tr>
+      <td><p>Destination:</p></td>
+      <td><input type="text" id="destination"></td>
+    </tr>
+
+    <tr>
+      <td><p>Arrival Time:</p></td>
+      <td><input type="text" id="arrival"></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><button id="search_button">Search!</button></td>
+    </tr>
+  </table>
   <div id="directions_fave"></div>
 </div>
 <!-- <div style="height: 500px; width: 500px" id="map_recent"></div> -->
