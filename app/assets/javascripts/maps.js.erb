@@ -1,45 +1,129 @@
-$('body.routes.routes_search').ready(function() {
-  console.log('maps.js loaded');
-
-  function initMap() {
-    console.log('initMap called')
-    var map = new google.maps.Map(document.getElementById('map_fave'), {
-      center: {lat: 25.77, lng: -80.2},
-      zoom: 12
-    });
-    var bikeLayer = new google.maps.BicyclingLayer();
-    bikeLayer.setMap(map);
-  }
-
-  google.maps.event.addDomListener(window, 'load', initMap);
-
-});
+// $('body.routes.routes_search').ready(function() {
+//   console.log('maps.js loaded');
+//
+//   function initMap() {
+//     console.log('initMap called')
+//
+//     var map = new google.maps.Map(document.getElementById('map_fave'), {
+//       center: {lat: 25.77, lng: -80.2},
+//       zoom: 12
+//     });
+//
+//     var bikeLayer = new google.maps.BicyclingLayer();
+//     bikeLayer.setMap(map);
+//   }
+//
+//   google.maps.event.addDomListener(window, 'load', initMap);
+//
+// });
 
 $('body.commuters.profile').ready(function() {
   console.log('maps.js.erb loaded');
 
-  // initialize map, apply bike layer
+  // INITIALIZE MAP, APPLY BIKE LAYER AND DIRECTIONS DISPLAY
   function initMap() {
     console.log('initMap called');
+
     var map = new google.maps.Map(document.getElementById('map_fave'), {
       center: {lat: 25.77, lng: -80.20},
       zoom: 12
     });
     var bikeLayer = new google.maps.BicyclingLayer();
     bikeLayer.setMap(map);
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('directions_fave'));
+  }
+
+  // DIRECTIONS REQUEST
+  function requestDirections() {
+    console.log('rD start');
+
+    var map = new google.maps.Map(document.getElementById('map_fave'), {
+      center: {lat: 25.77, lng: -80.20},
+      zoom: 12
+    });
+    var bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(map);
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('directions_fave'));
+
+    var directionService = new google.maps.DirectionsService();
+    var start;
+    var end;
+    // var arrive;
+
+    var directionRequest = {
+      origin: document.getElementById('origin').value, /*'5409 riviera drive coral gables fl 33146',*/
+      destination: document.getElementById('destination').value, /*'400 nw 26th street miami fl 33127',*/
+      travelMode: google.maps.TravelMode.TRANSIT,
+      transitOptions: {
+        // arrival_time: arrive,
+        modes: [
+          google.maps.TransitMode.RAIL,
+          // google.maps.TransitMode.BUS
+        ],
+        routingPreference: google.maps.TransitRoutePreference.FEWER_TRANSFERS
+      },
+      provideRouteAlternatives: false,
+      avoidHighways: true,
+      avoidTolls: true
+    };
+
+    directionService.route(directionRequest, function(result, status) {
+      directionsDisplay.setDirections(result);
+
+      console.dir(result.routes[0].legs[0].steps);
+      var steps = result.routes[0].legs[0].steps;
+      console.log(steps.length);
+
+      for (i = (steps.length - 1); i > -1; i--) {
+        var start = (steps[i].start_location.lat().toString() + ", " + steps[i].start_location.lng().toString());
+        var end = (steps[i].end_location.lat().toString() + ", " + steps[i].end_location.lng().toString());
+        console.log(start);
+        console.log(end);
+        console.log(steps[i].duration);
+
+        if (steps[i].travel_mode === "WALKING") {
+          console.log('walking');
+
+          directionService.route({
+            origin: start,
+            destination: end,
+            travelMode: google.maps.TravelMode.BICYCLING,
+            provideRouteAlternatives: false,
+            avoidHighways: true,
+            avoidTolls: true
+          }, function(result, status) {
+            console.dir(result.routes[0].legs);
+            var leg = result.routes[0].legs[0];
+            console.log(leg.duration);
+          });
+        } else {
+          console.log('transit');
+        }
+      }
+    });
   }
 
   google.maps.event.addDomListener(window, 'load', initMap);
 
-  // directions request
+  $('#search_button').on('click', function(e) {
+    e.preventDefault();
+    requestDirections();
+  });
 
 });
 
-var key = '&key=AIzaSyCFHwXOAx3AMwsD4zjr4vx_cPF_wVk2h2U';
-var base_url = 'https://maps.googleapis.com/maps/api/directions/json?';
-var request_url = '';
-var origin = '&origin=';
-var destination = '&destination=';
+
+
+
+
+function test() {
+  var origin = document.getElementById('origin').value;
+  console.log(origin);
+}
 
 function setAddress() {
   console.log('sA start');
@@ -80,5 +164,68 @@ function getResponse() {
 
   directionService.route(directionRequest, function(result, status) {
     console.dir(result.routes[0].legs[0].steps);
+    var steps = result.routes[0].legs[0].steps;
+    console.log(steps.length);
+    console.dir(steps[0]);
+
+    console.log(steps[2].end_location.lat());
+    console.log(steps[2].end_location.lng());
   });
+}
+
+function responseLoop() {
+  console.log('rL start');
+  var directionService = new google.maps.DirectionsService();
+  var start;
+  var end;
+
+  var directionRequest = {
+    origin:'5409 riviera drive coral gables fl 33146',
+    destination:'400 nw 26th street miami fl 33127',
+    travelMode: google.maps.TravelMode.TRANSIT,
+    transitOptions: {
+      // arrival_time: '',
+      // departure_time: '', // new Date(1337675679473)
+      modes: [
+        google.maps.TransitMode.RAIL,
+        // google.maps.TransitMode.BUS
+      ],
+      routingPreference: google.maps.TransitRoutePreference.FEWER_TRANSFERS
+    },
+    provideRouteAlternatives: false,
+    avoidHighways: true,
+    avoidTolls: true
+  };
+
+  directionService.route(directionRequest, function(result, status) {
+    console.dir(result.routes[0].legs[0].steps);
+    var steps = result.routes[0].legs[0].steps;
+    console.log(steps.length);
+    for (i = (steps.length - 1); i > -1; i--) {
+      var start = (steps[i].start_location.lat().toString() + ", " + steps[i].start_location.lng().toString());
+      console.log(start);
+      var end = (steps[i].end_location.lat().toString() + ", " + steps[i].end_location.lng().toString());
+      console.log(end);
+      console.log(steps[i].duration);
+      if (steps[i].travel_mode === "WALKING") {
+        console.log('walking');
+        directionService.route({
+          origin: start,
+          destination: end,
+          travelMode: google.maps.TravelMode.BICYCLING,
+          provideRouteAlternatives: false,
+          avoidHighways: true,
+          avoidTolls: true
+        }, function(result, status) {
+          console.dir(result.routes[0].legs);
+          var leg = result.routes[0].legs[0];
+          console.log(leg.duration);
+        });
+      } else {
+        console.log('transit');
+      }
+    }
+
+  });
+
 }
