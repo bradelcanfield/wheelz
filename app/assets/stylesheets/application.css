@@ -2,6 +2,21 @@
 *= require_tree
 *= require_self
 */
+
+.map-search {
+  margin-left: -40em;
+  margin-top: -500px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: black;
+  opacity: 0.6;
+  margin-left: -8px;
+  margin-right: 80em;
+}
+
+.search-div {
+  margin-left: 40%;
+}
+
 div.posts li {
   float: inherit;
 }
@@ -66,6 +81,7 @@ li a:hover {
   position: relative;
   display: inline-block;
   background: rgba(0,0,0,0);
+  z-index: 5;
 }
 
 .dropbtn {
@@ -98,6 +114,7 @@ li a:hover {
 #myDropdown {
   display: none;
   color: white;
+  z-index: 5;
 }
 
 .dropdown-content {
@@ -524,7 +541,7 @@ li a {
   #profile-pic {
     float: left;
     padding-bottom: 0;
-    z-index: 5;
+    z-index: 4;
     position: absolute;
     margin-top: -4em;
 
@@ -535,6 +552,7 @@ li a {
     float: left;
     height: 10%;
     width: 20%;
+    z-index: 3;
   }
 
   .prof-thumbnail {
@@ -542,6 +560,7 @@ li a {
     float: left;
     height: 20%;
     width: 40%;
+    z-index: 4;
   }
 
   td {
@@ -558,6 +577,20 @@ li a {
       position: relative;
       z-index: 3;
       box-shadow: 4px 8px 16px 4px rgba(0.2,0,0,0.2);
+  }
+
+  .map-search {
+    margin-left: -1px;
+    margin-top: 1px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: black;
+    opacity: 0.6;
+    margin-left: -8px;
+    margin-right: 500em;
+  }
+
+  .search-div {
+    margin-left: 20%;
   }
 
 }

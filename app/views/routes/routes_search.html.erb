@@ -3,8 +3,8 @@
   <h1>Where Do You Want To Go?</h1>
 
   <%= form_for(@search) do |f| %>
-  <div class="field">
-    <table style="margin: auto;">
+  <div class="search-div">
+    <table id="search-table">
       <tr>
         <td><%= f.label :start_pt, "Origin:" %></td>
         <td><%= f.text_field :start_pt %></td>
