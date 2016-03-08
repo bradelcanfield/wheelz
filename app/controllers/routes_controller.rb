@@ -17,6 +17,10 @@ class RoutesController < ApplicationController
     respond_to do |format|
       if @search.save
         format.html { redirect_to profile_path}
+        flash[:success] = "search saved"
+        $start_pt = @search.start_pt
+        $end_pt = @search.end_pt
+        $arrive_by = @search.arrive_by
       else
         format.html { render :routes_search}
       end
