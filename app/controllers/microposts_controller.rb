@@ -4,8 +4,7 @@ class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.all
-
+    @microposts = current_user.microposts
   end
 
   # GET /microposts/1
@@ -13,14 +12,11 @@ class MicropostsController < ApplicationController
   def show
     @micropost = Micropost.find(params[:id])
 
-    @original_id = params[:original_id]
-
-
   end
 
   # GET /microposts/new
   def new
-    @micropost = Micropost.new
+    @micropost = current_user.microposts.new
   end
 
   # GET /microposts/1/edit
@@ -30,23 +26,7 @@ class MicropostsController < ApplicationController
   # POST /microposts
   # POST /microposts.json
   def create
-  #   @micropost = Micropost.build(params[:micropost])
-  #   @micropost.commuter_id = current_user.id
-  #
-  #   respond_to do |format|
-  #   if @micropost.save
-  #     format.html { redirect_to @micropost, notice: 'Post was successfully created.' }
-  #     format.json { render action: 'show', status: :created, location: @micropost }
-  #   else
-  #     format.html { render action: 'new' }
-  #     format.json { render json: @micropost.errors, status: :unprocessable_entity }
-  #   end
-  # end
-
-
-
-    @micropost = Micropost.new(micropost_params)
-
+    @micropost = current_user.microposts.new(micropost_params)
     respond_to do |format|
       if @micropost.save
         format.html { redirect_to @micropost, notice: 'Micropost was successfully created.' }
