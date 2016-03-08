@@ -39,7 +39,7 @@
 
         <% if current_user%>
         Signed in as <%= current_user.name %>
-        <button class="logout-button"><%= link_to 'Logout', logout_path, method: :delete %></button>
+        <button class="logout-button"><%= link_to 'Logout', logout_path %></button>
         <% else %>
         <%= form_tag '/login' do %>
         <%end%>
