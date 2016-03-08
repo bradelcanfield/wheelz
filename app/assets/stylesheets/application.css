@@ -2,6 +2,19 @@
 *= require_tree
 *= require_self
 */
+.map-search p{
+  color: white;
+}
+
+.map-search {
+  /*float: left;*/
+  margin-right: 70em;
+  margin-top: -41em;
+  margin-left: -1em;
+  background-color: black;
+  opacity: 0.6;
+}
+
 #about-par {
   margin-left: 10em;
   margin-right: 10em;
@@ -578,5 +591,23 @@ li a {
   #about-list {
     line-height: 0;
   }
+
+  .map-search p{
+    color: white;
+    font-size: 8px;
+    font-family: sans-serif;
+  }
+
+  .map-search {
+    float: left;
+    /*margin-right: 8em;*/
+    right: 0;
+    margin-top: -201px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: black;
+    opacity: 0.6;
+    margin-left: -8px;
+  }
+
 
 }
