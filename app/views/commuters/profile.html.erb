@@ -4,8 +4,6 @@
 <img class="prof-thumbnail"src="/assets/default_pic.png" alt="">
 </div>
 
-
-
 <div class="holder">
   <div id="welcome">
     <% if current_user%><br>
@@ -20,6 +18,10 @@
 
   <div class="appointments">
     <button class="appts"><%= link_to 'Set an alarm for your route departure!', appointments_new_path %></button>
+  </div><br>
+
+  <div class="appointmens">
+    <button class="appts"><%= link_to 'Post!', microposts_new_path %></button>
   </div>
 </div>
 
@@ -32,7 +34,7 @@
 <td><h3>Name:</h3></td> <td><%= current_user.name %></td>
 </tr>
 <tr>
-<td><h3>Phone Number:</h3></td> <td><%= current_user.phone_change %></td>
+<td><h3>Phone Number:</h3></td> <td>305-555-5555</td>
 </tr>
 <tr>
 <td><h3>Email:</h3></td> <td><%= current_user.email %></td>
