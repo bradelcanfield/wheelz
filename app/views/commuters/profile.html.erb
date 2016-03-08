@@ -1,29 +1,43 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<h1 >Profile Page</h1>
-
-<img src="/assets/default_pic.png" alt="" height="200" width="200">
-
-<h3>Name: <%= current_user.name %></h3>
-<h3>Phone Number:  </h3>
-<h3>Email:</h3>
-
-<div id="welcome">
-  <% if current_user%>
-  Welcome, <%= current_user.name  %>!
-  <%end%>
+<div id="profile-pic">
+<img class="prof-thumbnail"src="/assets/default_pic.png" alt="">
 </div>
-<br>
 
-<div class="search-link">
-  <button class="search-bttn"><%= link_to 'Destination Search', routes_path %></button>
+
+
+<div class="holder">
+  <div id="welcome">
+    <% if current_user%><br>
+    Welcome, <%= current_user.name  %>!
+    <%end%>
+  </div><br>
+
+  <div class="search-link">
+    <button class="search-bttn"><%= link_to 'Destination Search', routes_path %></button>
+  </div><br>
+
+
+  <div class="appointments">
+    <button class="appts"><%= link_to 'Set an alarm for your route departure!', appointments_new_path %></button>
+  </div>
 </div>
-<br>
 
-<div class="appointments">
-  <button class="appts"><%= link_to 'Set an alarm for your route departure!', appointments_new_path %></button>
-</div>
-<br>
 
+<br>
+<table id="profile-info">
+<tr>
+<td><h3>Name:</h3></td> <td><%= current_user.name %></td>
+</tr>
+<tr>
+<td><h3>Phone Number:</h3></td> <td><%= current_user.phone_change %></td>
+</tr>
+<tr>
+<td><h3>Email:</h3></td> <td><%= current_user.email %></td>
+</tr>
+</table>
+
+<br>
 <div id="map_fave"></div>
 <br>
 <p>Origin:</p>
@@ -34,5 +48,6 @@
 <input type="text" id="arrival">
 <br>
 <button id="search_button">Search!</button>
-<!-- <div style="height: 500px; width: 500px" id="map_recent"></div> -->
+<br>
 <div id="directions_fave"></div>
+<!-- <div style="height: 500px; width: 500px" id="map_recent"></div> -->

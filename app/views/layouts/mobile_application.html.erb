@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Wheelz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -13,7 +14,7 @@
 
   <header class="nav" id="top" role="banner">
     <nav id="navbar"
-    class="collapse navbar-collapse">
+    class="navbar-list">
     <ul>
       <li>
         <a style="color:white" href="../">Home</a>
@@ -23,6 +24,12 @@
       </li>
       <li>
         <a style="color:white" href="../profile/search">Search</a>
+      </li>
+      <li>
+        <a style="color:white" href="../index">Commuters</a>
+      </li>
+      <li>
+        <a style="color:white" href="../microposts/new">Posts</a>
       </li>
       <li>
         <a style="color:white" href="../about">About</a>
@@ -77,8 +84,8 @@
 </div>
 <%= yield %>
 
-<footer>
-<%= link_to "DESKTOP SITE", :controller => "home", :action => "set_layout", :mobile => "0" %>
-</footer>
+<!-- <footer>
+  <%= link_to "DESKTOP SITE", :controller => "home", :action => "set_layout", :mobile => "0" %>
+</footer> -->
 </body>
 </html>

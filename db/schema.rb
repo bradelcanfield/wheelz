@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160303191204) do
+ActiveRecord::Schema.define(version: 20160306060621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,9 +29,20 @@ ActiveRecord::Schema.define(version: 20160303191204) do
     t.string   "phone"
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "admin",           default: false
   end
+
+  create_table "microposts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "commuter_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "microposts", ["commuter_id", "created_at"], name: "index_microposts_on_commuter_id_and_created_at", using: :btree
+  add_index "microposts", ["commuter_id"], name: "index_microposts_on_commuter_id", using: :btree
 
   create_table "routes", force: :cascade do |t|
     t.string   "start_pt"
@@ -47,4 +58,5 @@ ActiveRecord::Schema.define(version: 20160303191204) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "microposts", "commuters"
 end

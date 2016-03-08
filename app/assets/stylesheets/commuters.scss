@@ -1,6 +1,18 @@
 // Place all the styles related to the Commuters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div.holder {
+    background-color: black;
+    opacity: 0.6;
+    padding-top: 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    margin-top: -4em;
+    position: relative;
+    z-index: 3;
+    box-shadow: 4px 8px 16px 4px rgba(0.2,0,0,0.2);
+}
+
 h1 {
   font-family:sans-serif;
   font-weight:500;
@@ -14,7 +26,58 @@ div#map_fave {
   height: 500px;
   width: 500px;
   margin: 0 auto;
-  opacity: 0.9;
+  box-shadow: 4px 8px 16px 4px rgba(0.2,0,0,0.2);
+}
+
+#profile-list {
+  display: list-item;
+  list-style-type: none;
+}
+
+#profile-pic {
+  float: left;
+  z-index: 5;
+  position: absolute;
+  margin-top: -4em;
+  margin-left: -1em;
+}
+
+
+.prof-thumbnail {
+  width: 240px;
+  height: 249px;
+  margin-right: -1em;
+}
+
+
+
+td {
+  color: white;
+  margin-right: -3em;
+}
+
+// tr {
+//   padding-right: -4em;
+// }
+
+#profile-info {
+  float: left;
+  right: 0;
+  margin-top: -517px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: black;
+  opacity: 0.6;
+  margin-left: -8px;
+
+}
+
+#profile-div {
+    margin: 0 auto;
+    margin-left: 24em;
+    margin-right: 24em;
+    margin-top: 0;
+    padding-bottom: 4em;
+    background-color: rgba(1,1,1,0);
 
 }
 
@@ -22,12 +85,18 @@ div#map_fave {
   text-align: center;
   font-family: sans-serif;
   font-size: 28px;
+  color: white;
+  margin-left: 6em;
+  margin-right: 6em;
+  padding-bottom: 10px;
+  padding-top: 2px;
 }
 
 .appts {
   position: center;
-  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 20%, 20% 0, 100% 0, 100% 55%, 55% 100%, 0 100%);
   background-color: rgba(0,0,0,0);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   color: white;
   padding: 13.5px;
   font-size: 18px;
@@ -49,12 +118,13 @@ div#map_fave {
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
-.appts:hover {background-color: #87CEFA}
+.appts:hover {background-color: #63B8FF}
 
 .search-bttn {
   position: center;
-  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 35%, 70% 100%, 0 100%);
   background-color: rgba(0,0,0,0);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   color: white;
   padding: 13.5px;
   font-size: 18px;
@@ -76,4 +146,4 @@ div#map_fave {
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
 
-.search-bttn:hover {background-color: #87CEFA}
+.search-bttn:hover {background-color: #63B8FF}

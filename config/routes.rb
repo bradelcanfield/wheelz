@@ -15,22 +15,43 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-
+  resources :commuters
+  get '/signup'  => 'commuters#new'
+  get '/index'   => 'commuters#index'
+  get '/microposts/new' => 'microposts#new'
   get '/profile/new' => 'commuters#new'
   post '/profile/new' => 'commuters#create'
+
+  resources :microposts
 
   resources :appointments
   get '/appointments' => 'appointments#welcome'
   post '/appointments/new' => 'appointments#new'
 
 
-  resources :controller #=> "home", :action => "set_layout", :mobile => "1"
+  resources :controller
+
   get '/mobile' => 'home#home'
 
-  resources :action #=> 'home#home'
+  resources :action
   get '/mobile/action' => 'home#set_layout'
 
   resources :mobile
+
+  resources :commuters
+  get '/signup'  => 'commuters#new'
+  get '/index'   => 'commuters#index'
+  get '/microposts' => 'microposts#new'
+  get '/microposts/new' => 'microposts#new'
+  get '/profile/new' => 'commuters#new'
+  post '/profile/new' => 'commuters#create'
+  get 'microposts/show' => 'microposts#show'
+
+  resources :microposts,          only: [:create, :destroy]
+
+
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
