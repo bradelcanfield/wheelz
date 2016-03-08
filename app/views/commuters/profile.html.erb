@@ -24,7 +24,7 @@
 </div>
 
 
-<br>
+<!-- <br>
 <table id="profile-info">
 <tr>
 <td><h3>Name:</h3></td> <td><%= current_user.name %></td>
@@ -35,19 +35,21 @@
 <tr>
 <td><h3>Email:</h3></td> <td><%= current_user.email %></td>
 </tr>
-</table>
+</table> -->
 
 <br>
 <div id="map_fave"></div>
 <br>
-<p>Origin:</p>
-<input type="text" id="origin">
-<p>Destination:</p>
-<input type="text" id="destination">
-<p>Arrival Time:</p>
-<input type="text" id="arrival">
-<br>
-<button id="search_button">Search!</button>
-<br>
-<div id="directions_fave"></div>
+<div class="map-search">
+  <p>Origin:</p>
+  <input type="text" id="origin">
+  <p>Destination:</p>
+  <input type="text" id="destination">
+  <p>Arrival Time:</p>
+  <input type="text" id="arrival">
+  <br>
+  <button id="search_button">Search!</button>
+  <br>
+  <div id="directions_fave"></div>
+</div>
 <!-- <div style="height: 500px; width: 500px" id="map_recent"></div> -->
