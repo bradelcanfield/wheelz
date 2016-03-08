@@ -4,40 +4,24 @@
 
   <%= form_for(@search) do |f| %>
   <div class="field">
-    <%= f.label :start_pt, "Origin:" %><br>
-    <%= f.text_field :start_pt %>
-    <%= f.label :end_pt, "Arriving at:" %><br>
-    <%= f.text_field :end_pt %>
-    <%= f.label :arrive_by, "Search for a Destination:" %><br>
-    <%= f.text_field :arrive_by %>
-    <%= f.submit "Submit" %>
+    <table style="margin: auto;">
+      <tr>
+        <td><%= f.label :start_pt, "Origin:" %></td>
+        <td><%= f.text_field :start_pt %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :end_pt, "Destination:" %></td>
+        <td><%= f.text_field :end_pt %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :arrive_by, "Arriving at:" %></td>
+        <td><%= f.time_field :arrive_by %></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><%= f.submit "Submit" %></td>
+      </tr>
+    </table>
   </div>
   <%end%>
 </div>
-
-
-<div id="map_fave"></div>
-
-<br>
-<div class="map-search">
-  <p>Origin:</p>
-  <input type="text" id="origin">
-  <p>Destination:</p>
-  <input type="text" id="destination">
-  <p>Arrival Time:</p>
-  <input type="text" id="arrival">
-  <br>
-  <button id="search_button">Search!</button>
-  <br>
-  <div id="directions_fave"></div>
-</div>
-
-
-
-<!--
-<%# @routes.each do |route| %>
-<div class="route">
-<h1 class="article-title"><%#= link_to route.title, route %></h1>
-<p class="route-content"><%#= route.content %></p>
-</div>
-<%# end %> -->

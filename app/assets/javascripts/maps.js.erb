@@ -52,14 +52,14 @@ $('body.commuters.profile').ready(function() {
     var directionService = new google.maps.DirectionsService();
     var start;
     var end;
-    // var arrive;
+    var arrive;
 
     var directionRequest = {
       origin: document.getElementById('origin').value, /*'5409 riviera drive coral gables fl 33146',*/
       destination: document.getElementById('destination').value, /*'400 nw 26th street miami fl 33127',*/
       travelMode: google.maps.TravelMode.TRANSIT,
       transitOptions: {
-        // arrival_time: arrive,
+        arrivalTime: document.getElementById('arrival').value,
         modes: [
           google.maps.TransitMode.RAIL,
           // google.maps.TransitMode.BUS
@@ -121,7 +121,7 @@ $('body.commuters.profile').ready(function() {
 
 
 function test() {
-  var origin = <%= $start_pt %>
+  var origin = "<%= $start_pt %>"
   console.log(origin);
 }
 

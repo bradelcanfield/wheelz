@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/profile/edit' => 'commuters#edit'
   get '/routes' => 'routes#routes_search'
 
-  post '/routes' => 'routes#routes_search'
+  post '/routes' => 'routes#routes_search_create'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'

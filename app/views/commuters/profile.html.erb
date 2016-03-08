@@ -4,8 +4,6 @@
 <img class="prof-thumbnail"src="https://doc-08-4s-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/b88tcatcb1596sgnik6uu2dkhchtodjh/1457452800000/11315783392642122492/*/0B7EOqPoirNV-S0lQOGtQT3hyZzQ" alt="">
 </div>
 
-
-
 <div class="holder">
   <div id="welcome">
     <% if current_user%><br>
@@ -20,7 +18,11 @@
 
   <div class="appointments">
     <button class="appts"><%= link_to 'Set an alarm for your route departure!', appointments_new_path %></button>
-  </div>
+  </div><br>
+
+  <!-- <div class="appointmens">
+    <button class="appts"><%= link_to 'Post!', microposts_new_path %></button>
+  </div> -->
 </div>
 
 
@@ -30,7 +32,7 @@
 <td><h3>Name:</h3></td> <td><%= current_user.name %></td>
 </tr>
 <tr>
-<td><h3>Phone Number:</h3></td> <td><%= current_user.phone_change %></td>
+<td><h3>Phone Number:</h3></td> <td>305-555-5555</td>
 </tr>
 <tr>
 <td><h3>Email:</h3></td> <td><%= current_user.email %></td>
