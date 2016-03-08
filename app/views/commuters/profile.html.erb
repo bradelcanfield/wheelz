@@ -1,7 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div id="profile-pic">
-<img class="prof-thumbnail"src="/assets/default_pic.png" alt="">
+<img class="prof-thumbnail"src="http://gdurl.com/DPqH" alt="">
 </div>
 
 <div class="holder">
@@ -20,15 +20,13 @@
     <button class="appts"><%= link_to 'Set an alarm for your route departure!', appointments_new_path %></button>
   </div><br>
 
-  <div class="appointmens">
+  <!-- <div class="appointmens">
     <button class="appts"><%= link_to 'Post!', microposts_new_path %></button>
-  </div>
+  </div> -->
 </div>
 
-<div id="map_fave">
-</div><br>
 
-
+<!-- <br>
 <table id="profile-info">
 <tr>
 <td><h3>Name:</h3></td> <td><%= current_user.name %></td>
@@ -39,4 +37,21 @@
 <tr>
 <td><h3>Email:</h3></td> <td><%= current_user.email %></td>
 </tr>
-</table>
+</table> -->
+
+<br>
+<div id="map_fave"></div>
+<br>
+<div class="map-search">
+  <p>Origin:</p>
+  <input type="text" id="origin">
+  <p>Destination:</p>
+  <input type="text" id="destination">
+  <p>Arrival Time:</p>
+  <input type="text" id="arrival">
+  <br>
+  <button id="search_button">Search!</button>
+  <br>
+  <div id="directions_fave"></div>
+</div>
+<!-- <div style="height: 500px; width: 500px" id="map_recent"></div> -->
