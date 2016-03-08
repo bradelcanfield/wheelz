@@ -15,6 +15,15 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
+  resources :commuters
+  get '/signup'  => 'commuters#new'
+  get '/index'   => 'commuters#index'
+  get '/microposts/new' => 'microposts#new'
+  get '/profile/new' => 'commuters#new'
+  post '/profile/new' => 'commuters#create'
+
+  resources :microposts
+
   resources :appointments
   get '/appointments' => 'appointments#welcome'
   post '/appointments/new' => 'appointments#new'
