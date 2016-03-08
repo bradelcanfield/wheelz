@@ -19,7 +19,7 @@ class RoutesController < ApplicationController
         format.html {redirect_to profile_path}
         $start_pt = @search.start_pt
         $end_pt = @search.end_pt
-        $arrive_by = @search.arrive_by.to_i
+        $arrive_by = @search.arrive_by
       else
         format.html {render :routes_search}
       end
