@@ -2,6 +2,11 @@
 *= require_tree
 *= require_self
 */
+.signup-table {
+  margin-left: 38%;
+  margin-top: -2em;
+}
+
 .map-search p{
   color: white;
 }
@@ -607,6 +612,11 @@ li a {
     background-color: black;
     opacity: 0.6;
     margin-left: -8px;
+  }
+
+  .signup-table {
+    margin-left: 18%;
+    margin-top: 1px;
   }
 
 
