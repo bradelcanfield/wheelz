@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
 
   resources :controller
+
   get '/mobile' => 'home#home'
 
   resources :action
@@ -31,10 +32,11 @@ Rails.application.routes.draw do
   resources :commuters
   get '/signup'  => 'commuters#new'
   get '/index'   => 'commuters#index'
-  get '/microposts' => 'microposts#show'
-  get '/posts/new' => 'microposts#new'
+  get '/microposts' => 'microposts#new'
+  get '/microposts/new' => 'microposts#new'
   get '/profile/new' => 'commuters#new'
   post '/profile/new' => 'commuters#create'
+  get 'microposts/show' => 'microposts#show'
 
   resources :microposts,          only: [:create, :destroy]
 
