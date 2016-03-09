@@ -41,7 +41,7 @@ $('body.commuters.profile').ready(function() {
         //arrivalTime: arrive, /*document.getElementById('arrival').value,*/
         modes: [
           google.maps.TransitMode.RAIL,
-          // google.maps.TransitMode.BUS
+          google.maps.TransitMode.BUS
         ],
         routingPreference: google.maps.TransitRoutePreference.FEWER_TRANSFERS
       },
@@ -63,6 +63,7 @@ $('body.commuters.profile').ready(function() {
         console.log(start);
         console.log(end);
         console.log(steps[i].duration);
+        var time = [];
 
         if (steps[i].travel_mode === "WALKING") {
           console.log('walking');
@@ -78,6 +79,7 @@ $('body.commuters.profile').ready(function() {
             console.dir(result.routes[0].legs);
             var leg = result.routes[0].legs[0];
             console.log(leg.duration);
+            return leg.duration
           });
         } else {
           console.log('transit');
@@ -93,10 +95,11 @@ $('body.commuters.profile').ready(function() {
             console.dir(result.routes[0].legs);
             var leg = result.routes[0].legs[0];
             console.log(leg.duration);
+            return leg.duration
           });
         }
-      }
 
+      }
     });
   }
 
