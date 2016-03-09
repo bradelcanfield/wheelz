@@ -3,14 +3,19 @@
 *= require_self
 */
 
+#updated-departure {
+  color: white;
+}
+
 .map-search {
   margin-left: -40em;
   margin-top: -500px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   background-color: black;
-  opacity: 0.6;
+  opacity: 0.8;
   margin-left: -8px;
   margin-right: 80em;
+  color: blue;
 }
 
 .search-div {

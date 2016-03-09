@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20160308220343) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "microposts", ["commuter_id", "created_at"], name: "index_microposts_on_commuter_id_and_created_at", using: :btree
   add_index "microposts", ["commuter_id"], name: "index_microposts_on_commuter_id", using: :btree
 
   create_table "routes", force: :cascade do |t|
